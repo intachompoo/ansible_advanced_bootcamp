@@ -1,11 +1,23 @@
 ---
-- name: Generate openstack in-memory inventory
-  hosts: jumpbox
-  gather_facts: false
+- hosts: localhost
+  connection: local
   tags:
-    - stage4
-    - inventory
+     - stage4
+     - inventory
 
   roles:
     - name: osp-inventory
 ...
+
+
+#---
+#- name: Generate openstack in-memory inventory
+#  hosts: jumpbox
+#  gather_facts: false
+#  tags:
+#    - stage4
+#    - inventory
+#
+#  roles:
+#    - name: osp-inventory
+#...
